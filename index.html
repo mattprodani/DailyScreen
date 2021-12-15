@@ -665,7 +665,7 @@
 					  </tr>
 					  <tr>
 						  <td style="padding: 1rem 0;" valign="middle">
-						  <p style="font-weight: bold; font-size: 1.5rem; line-height: 100%; margin: 0; padding-bottom: .5rem; text-align: center;">Mathias Prodani</p>
+						  <p id = "myname" style="font-weight: bold; font-size: 1.5rem; line-height: 100%; margin: 0; padding-bottom: .5rem; text-align: center;">Mathias Prodani</p>
   
 						  <p id="todaydate" style="font-weight: bold; font-size: 1.5rem; line-height: 100%; margin: 0; text-align: center;" valign="middle">datehere</p>
 						  </td>
@@ -1245,5 +1245,7 @@
 		
 		var date = today.getDate()+' '+today.toLocaleString('en-us', { month: 'short' })+' '+today.getFullYear();
 		document.getElementById("todaydate").innerHTML=date;
+		var param = document.URL.split('?').pop().replace("+", " ");
+		document.getElementById("myname").innerHTML = param;
 	</script>
 </body>
